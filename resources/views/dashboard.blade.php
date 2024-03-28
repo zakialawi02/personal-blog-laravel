@@ -35,7 +35,34 @@
         <p>
             {{ __("You're logged in!") }}
         </p>
+        <p>
+            Welcome {{ Auth::user()->name }}, {{ "@" . Auth::user()->username }}
+        </p>
     </div>
+
+    @if (Auth::user()->role == "admin")
+        <div class="card p-3">
+            <div class="">
+                <h4>Menu Admin</h4>
+            </div>
+            <p>Menu ini akan tampil jika rolenya 'admin'</p>
+        </div>
+    @elseif (Auth::user()->role == "writer")
+        <div class="card p-3">
+            <div class="">
+                <h4>Menu Writer</h4>
+            </div>
+            <p>Menu ini akan tampil jika rolenya 'writer'</p>
+        </div>
+    @elseif (Auth::user()->role == "user")
+        <div class="card p-3">
+            <div class="">
+                <h4>Menu User</h4>
+            </div>
+            <p>Menu ini akan tampil jika rolenya 'user'</p>
+        </div>
+    @endif
+
 @endsection
 
 @section("javascript")

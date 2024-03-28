@@ -28,6 +28,7 @@ class FakerUsers extends Seeder
                     'password' => Hash::make('user'),
                     'role' => 'user',
                     'profile_photo_path' => '/assets/img/profile/user.png',
+                    'email_verified_at' => now(),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ]);
