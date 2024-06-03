@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\PostController;
@@ -156,3 +155,7 @@ Route::post('/show-comment-section', [ArticleController::class, 'showCommentSect
 
 
 require_once __DIR__ . '/auth.php';
+
+
+// INERTIA ROUTES
+require_once __DIR__ . '/inertia.php';

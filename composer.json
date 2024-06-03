@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
+        "inertiajs/inertia-laravel": "^1.2",
         "intervention/image-laravel": "^1.2",
         "ipinfo/ipinfo": "^3.1",
         "laravel/framework": "^10.10",
